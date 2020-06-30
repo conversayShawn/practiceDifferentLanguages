@@ -20,7 +20,7 @@ namespace dayTwo
         static void allButI()
         {
             // declare array
-            int[] arrOne = { 1, 2, 3, 4, 5 };
+            int[] arrOne = {3, 2, 1};
             int[] arrTwo = new int[arrOne.Length];
             int indicesProduct = 1;
             // loop through array to find product of indices
@@ -29,18 +29,15 @@ namespace dayTwo
                 // find total indices product
                 indicesProduct = indicesProduct * arrOne[i];
                 // Console.WriteLine(indicesProduct);
-                for (int j = 0; j < arrOne.Length; j++)
-                {
-                    int productDividedByI = indicesProduct / arrOne[j];
-                    // Console.WriteLine(productDividedByI);
-                    // Console.WriteLine(indicesProduct);
-                    // Console.WriteLine(arrOne[i]);
-                    // arrTwo = productDividedByI;
-                }
             }
-            // Console.WriteLine(indicesProduct);
-            // loop through array
-
+            for (int i = 0; i < arrOne.Length; i++)
+            {
+                int productDividedByI = indicesProduct / arrOne[i];
+                // Console.WriteLine(productDividedByI);
+                // Console.WriteLine(arrOne[i]);
+                arrTwo[i] = productDividedByI;
+                Console.WriteLine(arrTwo[i]);
+            }
         }
     }
 }
