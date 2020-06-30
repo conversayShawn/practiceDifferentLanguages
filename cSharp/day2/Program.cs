@@ -34,7 +34,6 @@ namespace dayTwo
             {
                 int productDividedByI = indicesProduct / arrOne[i];
                 // Console.WriteLine(productDividedByI);
-                // Console.WriteLine(arrOne[i]);
                 arrTwo[i] = productDividedByI;
                 Console.WriteLine(arrTwo[i]);
             }
