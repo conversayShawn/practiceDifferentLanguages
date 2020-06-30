@@ -30,7 +30,8 @@ const allIndices = () => {
 		productDividedByI = arrProduct / arrOne[i];
 		// console.log(arrProduct);
 		// console.log(arrOne[i]);
-		// console.log(productDividedByI);
+        // console.log(productDividedByI);
+        // populate new array
         arrTwo.push(productDividedByI);
     }
     console.log(arrTwo);
