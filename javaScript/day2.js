@@ -34,7 +34,7 @@ const allIndices = () => {
         // populate new array
         arrTwo.push(productDividedByI);
     }
-    console.log(arrTwo);
+    // console.log(arrTwo);
     return arrTwo;
 }
 allIndices();

@@ -8,7 +8,7 @@
 
 using System;
 
-namespace dayThree
+namespace day3
 {
     class Program
     {

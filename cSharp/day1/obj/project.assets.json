@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Shawn/Desktop/projects/practice/cSharp/dayOne/dayOne.csproj",
-      "projectName": "dayOne",
-      "projectPath": "/Users/Shawn/Desktop/projects/practice/cSharp/dayOne/dayOne.csproj",
+      "projectUniqueName": "/Users/Shawn/Desktop/projects/practice/cSharp/day1/day1.csproj",
+      "projectName": "day1",
+      "projectPath": "/Users/Shawn/Desktop/projects/practice/cSharp/day1/day1.csproj",
       "packagesPath": "/Users/Shawn/.nuget/packages/",
-      "outputPath": "/Users/Shawn/Desktop/projects/practice/cSharp/dayOne/obj/",
+      "outputPath": "/Users/Shawn/Desktop/projects/practice/cSharp/day1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/Shawn/.nuget/NuGet/NuGet.Config"

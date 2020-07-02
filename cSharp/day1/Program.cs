@@ -4,7 +4,7 @@
 
 using System;
 
-namespace dayOne
+namespace day1
 {
     class Program
     {

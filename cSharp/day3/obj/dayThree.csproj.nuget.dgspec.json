@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Shawn/Desktop/projects/practice/cSharp/dayThree/dayThree.csproj": {}
+    "/Users/Shawn/Desktop/projects/practice/cSharp/day3/day3.csproj": {}
   },
   "projects": {
-    "/Users/Shawn/Desktop/projects/practice/cSharp/dayThree/dayThree.csproj": {
+    "/Users/Shawn/Desktop/projects/practice/cSharp/day3/day3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Shawn/Desktop/projects/practice/cSharp/dayThree/dayThree.csproj",
-        "projectName": "dayThree",
-        "projectPath": "/Users/Shawn/Desktop/projects/practice/cSharp/dayThree/dayThree.csproj",
+        "projectUniqueName": "/Users/Shawn/Desktop/projects/practice/cSharp/day3/day3.csproj",
+        "projectName": "day3",
+        "projectPath": "/Users/Shawn/Desktop/projects/practice/cSharp/day3/day3.csproj",
         "packagesPath": "/Users/Shawn/.nuget/packages/",
-        "outputPath": "/Users/Shawn/Desktop/projects/practice/cSharp/dayThree/obj/",
+        "outputPath": "/Users/Shawn/Desktop/projects/practice/cSharp/day3/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/Shawn/.nuget/NuGet/NuGet.Config"
