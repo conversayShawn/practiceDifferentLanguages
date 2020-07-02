@@ -8,3 +8,16 @@
 // returns a boolean — if the parentheses in the input string are ‘balanced’, 
 // then return true, else return false. For example, the program should 
 // print true for exp = “[()]{}{[()()]()}” and false for exp = “[(])”
+
+
+// declare variables
+
+const balancedParenthesis = () => 
+{
+    //sort string
+    //increment open (
+    // decrement close )
+    // if ( === ), return true
+    // ) !> (, return false
+    // repeat for [] and {}
+}
