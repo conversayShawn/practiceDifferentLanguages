@@ -11,7 +11,7 @@
 
 console.log('hello');
 // declare variables
-let exp = '(())()((()())())';
+let exp = '(())()((()())()))';
 // parenthesis
 let openP = 0;
 let closeP = 0;
@@ -37,7 +37,11 @@ const paranthesisCount = () => {
 		if (individualParenthsis[i] === ')') {
 			// decrement close )
 			closeP++;
-		}
+        }
+        if (closeP > openP) {
+            console.log("tested")
+            return false;
+        }
 	}
 	console.log(openP);
 	console.log(closeP);
