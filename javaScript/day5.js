@@ -9,8 +9,20 @@
 // then return true, else return false. For example, the program should 
 // print true for exp = “[()]{}{[()()]()}” and false for exp = “[(])”
 
-
+console.log("hello")
 // declare variables
+let exp = "[()]{}{[()()]()}"
+// parenthesis
+let openP = 0;
+let closeP = 0;
+// brackets
+let openB = 0;
+let closeB = 0;
+// curly braces
+let openC = 0;
+let closeC = 0;
+
+
 
 const balancedParenthesis = () => 
 {
