@@ -27,8 +27,23 @@ const balancedParenthesis = () =>
     //split string
     let individualParenthsis = exp.split("");
     console.log(individualParenthsis);
-    //increment open (
-    // decrement close )
+    // if "(" or ")"
+    for (let i = 0; i < individualParenthsis.length; i++) {
+        if ("(") 
+        {
+            //increment open (
+            openP++;
+            // console.log(openP);
+        } 
+        if (")") 
+        {
+            // decrement close )
+            closeP++;
+            // console.log(closeP);
+        }
+    }
+    console.log(openP);
+    console.log(closeP);
     // if ( === ), return true
     // ) !> (, return false
     // repeat for [] and {}
