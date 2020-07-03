@@ -11,7 +11,7 @@
 
 console.log("hello")
 // declare variables
-let exp = "(())())(())()())())"
+let exp = "(())()((()())())"
 // parenthesis
 let openP = 0;
 let closeP = 0;
@@ -26,24 +26,25 @@ const balancedParenthesis = () =>
 {
     //split string
     let individualParenthsis = exp.split("");
-    console.log(individualParenthsis);
-    // if "(" or ")"
+    // console.log(individualParenthsis);
+    // loop through individualParenthesis
     for (let i = 0; i < individualParenthsis.length; i++) {
-        if ("(") 
+        // if "(" or ")"
+        if (individualParenthsis[i] === "(") 
         {
             //increment open (
             openP++;
             // console.log(openP);
         } 
-        if (")") 
-        {
-            // decrement close )
-            closeP++;
-            // console.log(closeP);
-        }
+        // if (")") 
+        // {
+        //     // decrement close )
+        //     closeP++;
+        //     // console.log(closeP);
+        // }
     }
     console.log(openP);
-    console.log(closeP);
+    // console.log(closeP);
     // if ( === ), return true
     // ) !> (, return false
     // repeat for [] and {}
