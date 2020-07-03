@@ -34,17 +34,15 @@ const balancedParenthesis = () =>
         {
             //increment open (
             openP++;
-            // console.log(openP);
         } 
-        // if (")") 
-        // {
-        //     // decrement close )
-        //     closeP++;
-        //     // console.log(closeP);
-        // }
+        if (individualParenthsis[i] === ")") 
+        {
+            // decrement close )
+            closeP++;
+        }
     }
     console.log(openP);
-    // console.log(closeP);
+    console.log(closeP);
     // if ( === ), return true
     // ) !> (, return false
     // repeat for [] and {}
