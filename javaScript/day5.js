@@ -11,25 +11,26 @@
 
 console.log("hello")
 // declare variables
-let exp = "[()]{}{[()()]()}"
+let exp = "(())())(())()())())"
 // parenthesis
 let openP = 0;
 let closeP = 0;
-// brackets
-let openB = 0;
-let closeB = 0;
-// curly braces
-let openC = 0;
-let closeC = 0;
-
-
+// // brackets
+// let openB = 0;
+// let closeB = 0;
+// // curly braces
+// let openC = 0;
+// let closeC = 0;
 
 const balancedParenthesis = () => 
 {
-    //sort string
+    //split string
+    let individualParenthsis = exp.split("");
+    console.log(individualParenthsis);
     //increment open (
     // decrement close )
     // if ( === ), return true
     // ) !> (, return false
     // repeat for [] and {}
 }
+balancedParenthesis();
