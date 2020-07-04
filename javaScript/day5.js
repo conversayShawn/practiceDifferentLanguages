@@ -11,51 +11,77 @@
 
 console.log('hello');
 // declare variables
-let exp = '(())()((()())()))';
+let exp = '(())()((()())())';
+let exb = '[[]][][[[][]][]]';
+// let exc = '{{}}{}{{{}{}}{}}';
 // parenthesis
 let openP = 0;
 let closeP = 0;
-// // brackets
-// let openB = 0;
-// let closeB = 0;
+// brackets
+let openB = 0;
+let closeB = 0;
 // // curly braces
 // let openC = 0;
 // let closeC = 0;
 
-// count ()
-const paranthesisCount = () => {
+// count []
+const bracketCount = () => {
 	//split string
-	let individualParenthsis = exp.split('');
+	let individualBracket = exb.split('');
 	// console.log(individualParenthsis);
 	// loop through individualParenthesis
-	for (let i = 0; i < individualParenthsis.length; i++) {
+	for (let i = 0; i < individualBracket.length; i++) {
 		// if "(" or ")"
-		if (individualParenthsis[i] === '(') {
+		if (individualBracket[i] === '[') {
 			//increment open (
-			openP++;
-		}
-		if (individualParenthsis[i] === ')') {
+			openB++;
+		} else if (individualBracket[i] === ']') {
 			// decrement close )
-			closeP++;
+			closeB++;
         }
-        if (closeP > openP) {
-            console.log("tested")
-            return false;
-        }
+        // if (closeB > openB) {
+        //     console.log("tested")
+        //     return false;
+        // }
 	}
-	console.log(openP);
-	console.log(closeP);
+	console.log(openB);
+	console.log(closeB);
 };
+bracketCount();
 
-const balancedParenthesis = () => {
-	paranthesisCount();
-	// if ( === ), return true
-	if (openP === closeP) {
-		console.log('true');
-	} else {
-		console.log('false');
-	}
-	// ) !> (, return false
-	// repeat for [] and {}
-};
-balancedParenthesis();
+// count ()
+// const paranthesisCount = () => {
+// 	//split string
+// 	let individualParenthsis = exp.split('');
+// 	// console.log(individualParenthsis);
+// 	// loop through individualParenthesis
+// 	for (let i = 0; i < individualParenthsis.length; i++) {
+// 		// if "(" or ")"
+// 		if (individualParenthsis[i] === '(') {
+// 			//increment open (
+// 			openP++;
+// 		} else if (individualParenthsis[i] === ')') {
+// 			// decrement close )
+// 			closeP++;
+//         }
+//         if (closeP > openP) {
+//             console.log("tested")
+//             return false;
+//         }
+// 	}
+// 	// console.log(openP);
+// 	// console.log(closeP);
+// };
+
+// const balancedParenthesis = () => {
+// 	paranthesisCount();
+// 	// if ( === ), return true
+// 	if (openP === closeP) {
+// 		console.log('true');
+// 	} else {
+// 		console.log('false');
+// 	}
+// 	// ) !> (, return false
+// 	// repeat for [] and {}
+// };
+// balancedParenthesis();
