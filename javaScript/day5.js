@@ -12,7 +12,7 @@
 console.log('hello');
 // declare variables
 let exp = '(())()((()())())';
-let exb = '[[]][][[[][]][]]';
+let exb = '[]][';
 // let exc = '{{}}{}{{{}{}}{}}';
 // parenthesis
 let openP = 0;
@@ -39,13 +39,19 @@ const bracketCount = () => {
 			// decrement close )
 			closeB++;
         }
-        // if (closeB > openB) {
-        //     console.log("tested")
-        //     return false;
-        // }
 	}
-	console.log(openB);
-	console.log(closeB);
+            if (closeB > openB) {
+                console.log("closeB > openB false")
+                return false;
+            } else if (openB !== closeB) {
+                console.log("openB !== closeB false")
+                // return false;
+            } else {
+                console.log("openB === closeB true")
+                // return true;
+            }
+	// console.log(openB);
+	// console.log(closeB);
 };
 bracketCount();
 
@@ -65,7 +71,7 @@ bracketCount();
 // 			closeP++;
 //         }
 //         if (closeP > openP) {
-//             console.log("tested")
+//             console.log("testedP")
 //             return false;
 //         }
 // 	}
