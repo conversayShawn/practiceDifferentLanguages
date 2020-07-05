@@ -11,7 +11,7 @@
 
 console.log('hello');
 // declare variables
-let exTest = '()[]';
+let exTest = ')[]';
 let exp = '(())()';
 let exb = '[[]]';
 // let exc = '{{}}{}{{{}{}}{}}';
@@ -22,7 +22,7 @@ let countP = false;
 // brackets
 let openB = 0;
 let closeB = 0;
-let countB = true;
+let countB = false;
 // // curly braces
 // let openC = 0;
 // let closeC = 0;
@@ -94,7 +94,7 @@ const paranthesisCount = () => {
 const balancedParenthesis = () => {
 	paranthesisCount();
 	// if ( === ), return true
-	if (paranthesisCount === true) {
+	if (countP === true) {
         // console.log('true');
         bracketCount();
 	} 
