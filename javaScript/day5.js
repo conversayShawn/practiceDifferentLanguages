@@ -11,7 +11,7 @@
 
 console.log('hello');
 // declare variables
-let exTest = '[](())';
+let exTest = '[(])';
 let exp = '(())()';
 let exb = '[[]]';
 let exCB = '{{}';
@@ -30,7 +30,7 @@ let closeCB = 0;
 // count {}
 const curlyBraceCount = () => {
 	//split string
-	let individualCurlyBrace = exCB.split('');
+	let individualCurlyBrace = exTest.split('');
 	// console.log(individualCurlyBrace);
 	// loop through individualCurlyBrace
 	for (let i = 0; i < individualCurlyBrace.length; i++) {
@@ -58,80 +58,85 @@ const curlyBraceCount = () => {
 	// console.log(openCB);
 	// console.log(closeCB);
 };
-curlyBraceCount();
+// curlyBraceCount();
 
-// // count []
-// const bracketCount = () => {
-// 	//split string
-// 	let individualBracket = exTest.split('');
-// 	// console.log(individualParenthsis);
-// 	// loop through individualParenthesis
-// 	for (let i = 0; i < individualBracket.length; i++) {
-// 		// if "(" or ")"
-// 		if (individualBracket[i] === '[') {
-// 			//increment open (
-// 			openB++;
-// 		} else if (individualBracket[i] === ']') {
-// 			// decrement close )
-//             closeB++;
-//             // stop method if closeB > openB
-//             if (closeB > openB) {
-//                 console.log("closeB > openB false");
-//                 return false;
-//             }
-//         }
-// 	}
-//             if (openB !== closeB) {
-//                 console.log("openB !== closeB false");
-//                 return false;
-//             } else {
-//                 console.log("openB === closeB true");
-//                 countB = true;
-//             }
-// 	// console.log(openB);
-// 	// console.log(closeB);
-// };
-// // bracketCount();
+// count []
+const bracketCount = () => {
+	//split string
+	let individualBracket = exTest.split('');
+	// console.log(individualParenthsis);
+	// loop through individualParenthesis
+	for (let i = 0; i < individualBracket.length; i++) {
+		// if "(" or ")"
+		if (individualBracket[i] === '[') {
+			//increment open (
+			openB++;
+		} else if (individualBracket[i] === ']') {
+			// decrement close )
+            closeB++;
+            // stop method if closeB > openB
+            if (closeB > openB) {
+                console.log("closeB > openB false");
+                return false;
+            }
+        }
+	}
+            if (openB !== closeB) {
+                console.log("openB > closeB false");
+                return false;
+            } else {
+                console.log("openB === closeB true");
+                countB = true;
+            }
+	// console.log(openB);
+	// console.log(closeB);
+};
+// bracketCount();
 
-// const paranthesisCount = () => {
-// 	//split string
-// 	let individualParenthsis = exTest.split('');
-// 	// console.log(individualParenthsis);
-// 	// loop through individualParenthesis
-// 	for (let i = 0; i < individualParenthsis.length; i++) {
-// 		// if "(" or ")"
-// 		if (individualParenthsis[i] === '(') {
-// 			//increment open (
-// 			openP++;
-// 		} else if (individualParenthsis[i] === ')') {
-// 			// decrement close )
-// 			closeP++;
-//             if (closeP > openP) {
-//                 console.log("closeP > openP false");
-//                 return false;
-//             }
-//         }
-// 	}
-//             if (openP !== closeP) {
-//                 console.log("openP !== closeP false");
-//                 return false;
-//             } else {
-//                 console.log("openP === closeP true");
-//                 countP = true;
-//             }
-// 	// console.log(openP);
-// 	// console.log(closeP);
-// };
-// // paranthesisCount();
+const paranthesisCount = () => {
+	//split string
+	let individualParenthsis = exTest.split('');
+	// console.log(individualParenthsis);
+	// loop through individualParenthesis
+	for (let i = 0; i < individualParenthsis.length; i++) {
+		// if "(" or ")"
+		if (individualParenthsis[i] === '(') {
+			//increment open (
+			openP++;
+		} else if (individualParenthsis[i] === ')') {
+			// decrement close )
+			closeP++;
+            if (closeP > openP) {
+                console.log("closeP > openP false");
+                return false;
+            }
+        }
+	}
+            if (openP !== closeP) {
+                console.log("openP > closeP false");
+                return false;
+            } else {
+                console.log("openP === closeP true");
+                countP = true;
+            }
+	// console.log(openP);
+	// console.log(closeP);
+};
+// paranthesisCount();
 
-// const balancedParenthesis = () => {
-// 	paranthesisCount();
-// 	// if ( === ), return true
-// 	if (countP === true) {
-//         // console.log('true');
-//         bracketCount();
-// 	} 
-// 	// ) !> (, return false
-// 	// repeat for [] and {}
-// };
-// balancedParenthesis();
+const balancedParenthesis = () => {
+	paranthesisCount();
+	// if ( === ), return true
+	if (countP === true) {
+        // console.log('true');
+        bracketCount();
+    }
+	if (countB === true) {
+        // console.log('true');
+        curlyBraceCount();
+        console.log("parentheses, brackets, and curly braces balanced")
+    }
+	// ) !> (, return false
+	// repeat for [] and {}
+};
+balancedParenthesis();
