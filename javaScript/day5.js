@@ -67,6 +67,7 @@ let closeCB = 0;
 // }
 
 // count []
+// pass openP parameter
 const bracketCount = (openP) => {
 	//split string
 	let individualBracket = exTest.split('');
@@ -86,20 +87,25 @@ const bracketCount = (openP) => {
                 return false;
             }
         }
-	}
+    }
+            // if openB !== closeB, return false
             if (openB !== closeB) {
                 console.log("openB > closeB false");
                 return false;
+            // else if parentheses not closed, return false
             } else if (openP % 2 !== 0) {
                 console.log("parenthesis not closed");
                 return false;
+            // openB === closeB, countB = true
             } else {
                 console.log("openB === closeB true");
                 countB = true;
             }
+    // verify openB & closeB
 	// console.log(openB);
 	// console.log(closeB);
 };
+// call bracketCount method
 // bracketCount();
 
 const paranthesisCount = () => {
