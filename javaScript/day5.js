@@ -74,34 +74,34 @@ const bracketCount = (openP) => {
 	// console.log(individualParenthsis);
 	// loop through individualParenthesis
 	for (let i = 0; i < individualBracket.length; i++) {
-		// if "(" or ")"
+		// if "[" or "]"
 		if (individualBracket[i] === '[') {
-			//increment open (
+			//increment open [
 			openB++;
 		} else if (individualBracket[i] === ']') {
-			// decrement close )
-            closeB++;
-            // stop method if closeB > openB
-            if (closeB > openB) {
-                console.log("closeB > openB false");
-                return false;
-            }
-        }
-    }
-            // if openB !== closeB, return false
-            if (openB !== closeB) {
-                console.log("openB > closeB false");
-                return false;
-            // else if parentheses not closed, return false
-            } else if (openP % 2 !== 0) {
-                console.log("parenthesis not closed");
-                return false;
-            // openB === closeB, countB = true
-            } else {
-                console.log("openB === closeB true");
-                countB = true;
-            }
-    // verify openB & closeB
+			// decrement close ]
+			closeB++;
+			// stop method if closeB > openB
+			if (closeB > openB) {
+				console.log('closeB > openB false');
+				return false;
+			}
+		}
+	}
+	// if openB !== closeB, return false
+	if (openB !== closeB) {
+		console.log('openB > closeB false');
+		return false;
+		// else if parentheses not closed, return false
+	} else if (openP % 2 !== 0) {
+		console.log('parenthesis not closed');
+		return false;
+		// openB === closeB, countB = true
+	} else {
+		console.log('openB === closeB true');
+		countB = true;
+	}
+	// verify openB & closeB
 	// console.log(openB);
 	// console.log(closeB);
 };
@@ -121,36 +121,39 @@ const paranthesisCount = () => {
 		} else if (individualParenthsis[i] === ')') {
 			// decrement close )
 			closeP++;
-            if (closeP > openP) {
-                console.log("missing opening '('");
-                return false;
-            }
-        }
-	}
-            if (openP !== closeP) {
-                console.log("missing closing ')'");
-                return false;
-            } else {
-                console.log("parenthses balanced");
-                countP = true;
-            }
+			if (closeP > openP) {
+				console.log("missing opening '('");
+				return false;
+			}
+		}
+    }
+    // if openP !== closeP, return false
+	if (openP !== closeP) {
+		console.log("missing closing ')'");
+        return false;
+	} else {
+		console.log('parenthses balanced');
+		countP = true;
+    }
+    // verify openP & closeP
 	// console.log(openP);
 	// console.log(closeP);
 };
+// call paranthesisCount method
 // paranthesisCount();
 
 const balancedParenthesis = () => {
 	paranthesisCount();
 	// if ( === ), return true
 	if (countP === true) {
-        // console.log('true');
-        bracketCount();
-    }
+		// console.log('true');
+		bracketCount();
+	}
 	// if (countB === true) {
-    //     // console.log('true');
-    //     curlyBraceCount();
-    //     console.log("parentheses, brackets, and curly braces balanced")
-    // }
+	//     // console.log('true');
+	//     curlyBraceCount();
+	//     console.log("parentheses, brackets, and curly braces balanced")
+	// }
 	// ) !> (, return false
 	// repeat for [] and {}
 };
