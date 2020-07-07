@@ -9,101 +9,107 @@
 // then return true, else return false. For example, the program should
 // print true for exp = “[()]{}{[()()]()}” and false for exp = “[(])”
 
-console.log('hello');
 // declare variables
-let exTest = '[(])';
-let exp = '(())()';
-let exb = '[[]]';
-let exCB = '{{}';
+// test ([{}]) string
+let exTest = '{[]}';
+//  test () string
+// let exp = '(())()';
+// test [] string
+// let exb = '[[]]';
+// test {} string
+// let exCB = '{{}';
 // parenthesis
 let openP = 0;
 let closeP = 0;
 let countP = false;
 // bracket
-let openB = 0;
-let closeB = 0;
-let countB = false;
+let openSB = 0;
+let closeSB = 0;
+let countSB = false;
 // curly brace
 let openCB = 0;
 let closeCB = 0;
 
-// // count {}
-// const curlyBraceCount = () => {
-// 	//split string
-// 	let individualCurlyBrace = exTest.split('');
-// 	// console.log(individualCurlyBrace);
-// 	// loop through individualCurlyBrace
-// 	for (let i = 0; i < individualCurlyBrace.length; i++) {
-// 		// if "{" or "}"
-// 		if (individualCurlyBrace[i] === '{') {
-// 			//increment open {
-// 			openCB++;
-// 		} else if (individualCurlyBrace[i] === '}') {
-// 			// decrement close }
-//             closeCB++;
-//             // stop method if closeCB > openCB
-//             if (closeCB > openCB) {
-//                 console.log("closeCB > openCB false");
-//                 return false;
-//             }
-//         }
-// 	}
-//             if (openCB !== closeCB) {
-//                 console.log("openCB > closeCB false");
-//                 return false;
-//             } else {
-//                 console.log("openCB === closeCB true");
-//                 countCB = true;
-//             }
-// 	// console.log(openCB);
-// 	// console.log(closeCB);
-// };
-// // curlyBraceCount();
-
-// check if previous bracket is closed properly
-// if (openP % 2 !== 0) {
-//     console.log("parenthesis not closed");
-//     return false;
-// }
+// count {}
+// pass openSB parameter
+const curlyBraceCount = (openSB) => {
+	//split string
+	let individualCurlyBrace = exTest.split('');
+	// console.log(individualCurlyBrace);
+	// loop through individualCurlyBrace
+	for (let i = 0; i < individualCurlyBrace.length; i++) {
+		// if "{" or "}"
+		if (individualCurlyBrace[i] === '{') {
+			//increment open {
+			openCB++;
+		} else if (individualCurlyBrace[i] === '}') {
+			// decrement close }
+			closeCB++;
+			// stop method if closeCB > openCB
+			if (closeCB > openCB) {
+				console.log("missing opening '{'");
+				return false;
+			}
+		}
+	}
+	// if openCB !== closeCB, return false
+	if (openCB !== closeCB) {
+		console.log("missing closing '}'");
+		return false;
+		// else if parentheses not closed, return false
+	} else if (openSB % 2 === 0) {
+		console.log("square bracket not closed");
+		return false;
+		// else openSB === openCB, closeCB = true
+	} else {
+		// console.log("curly braces closed");
+		countCB = true;
+	}
+	// verify openCB & closeCB
+	// console.log(openCB);
+	// console.log(closeCB);
+};
+// call curlyBraceCount method
+// curlyBraceCount();
 
 // count []
 // pass openP parameter
 const bracketCount = (openP) => {
 	//split string
 	let individualBracket = exTest.split('');
-	// console.log(individualParenthsis);
-	// loop through individualParenthesis
+	// console.log(individualBracket);
+	// loop through individualBracket
 	for (let i = 0; i < individualBracket.length; i++) {
 		// if "[" or "]"
 		if (individualBracket[i] === '[') {
 			//increment open [
-			openB++;
+			openSB++;
 		} else if (individualBracket[i] === ']') {
 			// decrement close ]
-			closeB++;
-			// stop method if closeB > openB
-			if (closeB > openB) {
-				console.log('closeB > openB false');
+			closeSB++;
+			// stop method if closeSB > openSB
+			if (closeSB > openSB) {
+				console.log('closeSB > openSB false');
 				return false;
 			}
 		}
 	}
-	// if openB !== closeB, return false
-	if (openB !== closeB) {
-		console.log('openB > closeB false');
+	// if openSB !== closeSB, return false
+	if (openSB !== closeSB) {
+		console.log('openSB > closeSB false');
 		return false;
 		// else if parentheses not closed, return false
 	} else if (openP % 2 !== 0) {
 		console.log('parenthesis not closed');
 		return false;
-		// openB === closeB, countB = true
+		// else openSB === closeSB, countSB = true
 	} else {
-		console.log('openB === closeB true');
-		countB = true;
+		// console.log('openSB === closeSB true');
+		countSB = true;
 	}
-	// verify openB & closeB
-	// console.log(openB);
-	// console.log(closeB);
+	// verify openSB & closeSB
+	// console.log(openSB);
+	// console.log(closeSB);
 };
 // call bracketCount method
 // bracketCount();
@@ -126,16 +132,16 @@ const paranthesisCount = () => {
 				return false;
 			}
 		}
-    }
-    // if openP !== closeP, return false
+	}
+	// if openP !== closeP, return false
 	if (openP !== closeP) {
 		console.log("missing closing ')'");
-        return false;
+		return false;
 	} else {
-		console.log('parenthses balanced');
+		// console.log("parenthses closed");
 		countP = true;
-    }
-    // verify openP & closeP
+	}
+	// verify openP & closeP
 	// console.log(openP);
 	// console.log(closeP);
 };
@@ -146,15 +152,12 @@ const balancedParenthesis = () => {
 	paranthesisCount();
 	// if ( === ), return true
 	if (countP === true) {
-		// console.log('true');
 		bracketCount();
+    }
+    // if [ === ], return true
+	if (countSB === true) {
+	    curlyBraceCount();
+	    console.log("parentheses, brackets, and curly braces balanced")
 	}
-	// if (countB === true) {
-	//     // console.log('true');
-	//     curlyBraceCount();
-	//     console.log("parentheses, brackets, and curly braces balanced")
-	// }
-	// ) !> (, return false
-	// repeat for [] and {}
 };
 balancedParenthesis();
