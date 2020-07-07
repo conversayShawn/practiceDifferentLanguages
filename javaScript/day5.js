@@ -11,7 +11,7 @@
 
 // declare variables
 // test ([{}]) string
-let exTest = '{[]}';
+let exTest = '({[]})';
 //  test () string
 // let exp = '(())()';
 // test [] string
@@ -32,7 +32,7 @@ let closeCB = 0;
 
 // count {}
 // pass openSB parameter
-const curlyBraceCount = (openSB) => {
+const curlyBraceCount = (openSB, openP) => {
 	//split string
 	let individualCurlyBrace = exTest.split('');
 	// console.log(individualCurlyBrace);
@@ -57,7 +57,7 @@ const curlyBraceCount = (openSB) => {
 		console.log("missing closing '}'");
 		return false;
 		// else if parentheses not closed, return false
-	} else if (openSB % 2 === 0) {
+	} else if (openSB % 2 === 1 && openP % 2 === 1) {
 		console.log("square bracket not closed");
 		return false;
 		// else openSB === openCB, closeCB = true
@@ -99,9 +99,9 @@ const bracketCount = (openP) => {
 		console.log('openSB > closeSB false');
 		return false;
 		// else if parentheses not closed, return false
-	} else if (openP % 2 !== 0) {
-		console.log('parenthesis not closed');
-		return false;
+	// } else if (openP % 2 !== 1) {
+	// 	console.log('parenthesis not closed');
+	// 	return false;
 		// else openSB === closeSB, countSB = true
 	} else {
 		// console.log('openSB === closeSB true');
